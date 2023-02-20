@@ -5,13 +5,13 @@ public class Student {
     private String surname;
     private String name;
     private int age;
-    private String course;
+    private int course;
     private String student_group;
     private boolean stateFunded; //бюджетная форма обучения
     public Student() {
     }
 
-    public Student(String surname, String name, int age, String course, String group, boolean stateFunded) {
+    public Student(String surname, String name, int age, int course, String group, boolean stateFunded) {
         this.surname = surname;
         this.name = name;
         this.age = age;
@@ -52,11 +52,11 @@ public class Student {
         this.age = age;
     }
 
-    public String getCourse() {
+    public int getCourse() {
         return course;
     }
 
-    public void setCourse(String course) {
+    public void setCourse(int course) {
         this.course = course;
     }
 
