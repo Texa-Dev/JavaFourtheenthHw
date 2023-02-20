@@ -10,7 +10,6 @@ public class Student {
     private boolean stateFunded; //бюджетная форма обучения
     public Student() {
     }
-
     public Student(String surname, String name, int age, int course, String group, boolean stateFunded) {
         this.surname = surname;
         this.name = name;
