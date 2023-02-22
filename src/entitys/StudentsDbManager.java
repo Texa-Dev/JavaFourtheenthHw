@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class StudentsDbManager {
+    //сделал так, но можно было слелать и на константах
     private Connection con;
     private Statement stat;
     private String url;
@@ -129,7 +130,7 @@ public class StudentsDbManager {
     //не уверен что это так
     public void deleteByField(String tabName, Student student, String fieldName) throws Exception {
         String sql = "delete from " + tabName + " where "+fieldName+" = ?";
-                Field field = student.getClass().getDeclaredField(fieldName);
+                Field field = Student.class.getDeclaredField(fieldName);
                 field.setAccessible(true);
         try (PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setObject(1, field.get(student)); //field.get(student) получение значения конкретного поля у студента
